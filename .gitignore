@@ -1,0 +1,19 @@
+parts/
+eggs/
+etc/
+var/
+downloads/
+develop-eggs/
+bin/
+*.egg-info/
+*.swp
+*.swo
+*~
+*.pyc
+*.orig
+.installed.cfg
+.mr.developer.cfg
+tmp/
+
+# Mac
+.DS_Store

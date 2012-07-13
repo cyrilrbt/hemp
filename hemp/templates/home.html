@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div>
+  {% for entry in entries %}
+    {{ modules.Entry(entry) }}
+    <div>
+      <a href="{{ reverse_url('post', entry.slug) }}">{{ _("Comments") }}</a>
+      {% if current_user %}
+        &mdash;
+        <a href="{{ reverse_url('compose') }}?id={{ entry.id }}">{{ _("Edit this post") }}</a>
+      {% end %}
+    </div>
+    <hr/>
+  {% end %} 
+</div>
+<div>
+  <a href="{{ reverse_url('compose') }}">New post</a>
+</div>
+{% end %}

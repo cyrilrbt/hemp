@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>hemp!</title>
+	<link rel="stylesheet" href="{{ static_url('css/hemp.css') }}">
+</head>
+
+<body>
+  <header>
+  <h1><a href="/">hemp</a></h1>
+  </header>
+
+  <div role="main" id="main">
+      <div id="content">
+        {% block body %}{% end %}
+      </div>
+  </div>
+
+  <footer>
+    <h3>hemp</h3>
+  </footer>
+
+  <script src="{{ static_url('js/hemp.js') }}"></script>
+
+</body>
+</html>
