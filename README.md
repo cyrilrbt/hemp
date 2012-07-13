@@ -15,14 +15,20 @@ It's pretty easy to try hemp, it's all ready to run. Just execute those commands
 	
 All you have to do next is open up your browser to [http://localhost:5000/](http://localhost:5000/). If your mongo server is not localhost, you'll have to change it in `hemp/settings/development.py`.
 
-The default behavior is that the first person that opens the `compose` page will be required to sign in (via google auth), a user account will be created for him, and he can post. Subsequent attempts will not create an account.
-
 ### Understanding those commands
 
 * `python bootstrap` is going to download and install anything that buildout will need to run. Don't worry, you don't need to be root: everything stays in the project directory.
 * `bin/buildout` is going to read `buildout.cfg` to install dependencies and create binaries in `bin/`
 * `bin/development` is going to load the development settings (from `hemp/settings/development.py`) and run tornado.
 
+### Auth?
+
+The default behavior is that the first person that opens the `compose` page will be required to sign in (via google auth), a user account will be created for him, and he can post. Subsequent attempts will not create an account.
+
+
+### Writing a post
+
+The blog posts should be written in [markdown](http://daringfireball.net/projects/markdown/). 
 
 ## Building your own blog
 
