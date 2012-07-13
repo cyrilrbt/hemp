@@ -18,7 +18,7 @@ All you have to do next is open up your browser to [http://localhost:5000/](http
 ### Understanding those commands
 
 * `python bootstrap` is going to download and install anything that buildout will need to run. Don't worry, you don't need to be root: everything stays in the project directory.
-* `bin/buildout` is going to read `buildout.cfg` to install dependencies and create binaries in `bin/`.
+* `bin/buildout` is going to read `buildout.cfg` to install dependencies and create binaries in `bin/`
 * `bin/development` is going to load the development settings (from `hemp/settings/development.py`) and run tornado.
 
 
