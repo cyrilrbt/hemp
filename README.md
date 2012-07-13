@@ -15,6 +15,8 @@ It's pretty easy to try hemp, it's all ready to run. Just execute those commands
 	
 All you have to do next is open up your browser to [http://localhost:5000/](http://localhost:5000/). If your mongo server is not localhost, you'll have to change it in `hemp/settings/development.py`.
 
+The default behavior is that the first person that opens the `compose` page will be required to sign in (via google auth), a user account will be created for him, and he can post. Subsequent attempts will not create an account.
+
 ### Understanding those commands
 
 * `python bootstrap` is going to download and install anything that buildout will need to run. Don't worry, you don't need to be root: everything stays in the project directory.
@@ -44,3 +46,7 @@ The recommended deployment method for Tornado is to run it directly, and use ngi
 Once it's installed, you can run `bin/supervisord` to start its daemon, and then `bin/supervisorctl` to control the processes. For example `bin/supervisorctl restart all` will restart all tornado instances. Pretty useful when you've just updated your code.
 
 By default, hemp will start 2 tornado processes, running on ports 2000 and 2001. All of that is configurable in `production.cfg`.
+
+## Comments
+
+I didn't think it was relevant or even worth it to build a comments engine, [Disqus](http://disqus.com/) can provide that, and it's really easy to integrate.
